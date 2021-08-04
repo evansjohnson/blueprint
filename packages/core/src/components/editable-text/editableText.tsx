@@ -171,7 +171,6 @@ export class EditableText extends AbstractPureComponent2<EditableTextProps, IEdi
             if (input != null) {
                 this.inputElement = input;
 
-                // temporary fix for #3882
                 if (!this.props.alwaysRenderInput) {
                     this.inputElement.focus();
                 }
