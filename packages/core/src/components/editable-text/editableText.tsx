@@ -255,7 +255,7 @@ export class EditableText extends AbstractPureComponent2<EditableTextProps, IEdi
     }
 
     public componentDidMount() {
-        this.updateInputDimensions();
+        requestAnimationFrame(() => this.updateInputDimensions());
     }
 
     public componentDidUpdate(prevProps: EditableTextProps, prevState: IEditableTextState) {
@@ -286,7 +286,7 @@ export class EditableText extends AbstractPureComponent2<EditableTextProps, IEdi
             this.props.minWidth !== prevProps.minWidth ||
             this.props.multiline !== prevProps.multiline
         ) {
-            this.updateInputDimensions();
+            requestAnimationFrame(() => this.updateInputDimensions());
         }
     }
 
