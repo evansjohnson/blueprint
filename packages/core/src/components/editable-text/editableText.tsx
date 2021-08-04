@@ -418,7 +418,7 @@ export class EditableText extends AbstractPureComponent2<EditableTextProps, IEdi
             });
             // synchronizes the ::before pseudo-element's height while editing for Chrome 53
             if (multiline && this.state.isEditing) {
-                this.setTimeout(() => (parentElement!.style.height = `${scrollHeight}px`));
+                requestAnimationFrame(() => (parentElement!.style.height = `${scrollHeight}px`));
             }
         }
     }
